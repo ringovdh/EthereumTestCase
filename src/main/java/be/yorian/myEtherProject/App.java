@@ -49,9 +49,10 @@ public class App
 		BigInteger max = new BigInteger("4300000");
         GreeterO contract = GreeterO.load(
         		"0x5e6d3bd77c23fe4fc552f6d3ef13a7e15b647585", web3Server, creds , min, max);
-        System.out.println( "gas: "+contract.getGasPrice());
+        System.out.println( "contractaddress: "+contract.getContractAddress());
         Utf8String message = contract.greet().get();
         System.out.println("Message returned by Contract.greet(): " + message.toString());
+        
         
 //        Utf8String rewardReasonMsg = new Utf8String("dag ringo!");
 //        Uint256 value = new Uint256(max);
